@@ -6,6 +6,10 @@ header .nav-wrapper {
   position: fixed;
 }
 
+header.header-wrapper {
+  z-index: 1;
+}
+
 header nav {
   box-sizing: border-box;
   display: grid;

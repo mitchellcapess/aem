@@ -1,7 +1,5 @@
 .video {
   text-align: center;
-  max-width: 900px;
-  margin: 24px auto;
 }
 
 .video[data-embed-loaded='false']:not(.placeholder) {
@@ -16,6 +14,31 @@
 
 .video video {
   max-width: 100%;
+  object-fit: cover;
+  z-index: -100;
+  background-position: 50%;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  inset: -100%;
+}
+
+.video-wrapper {
+  z-index: 2;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.video-wrapper .video.autoplay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .video .video-placeholder {
@@ -30,6 +53,12 @@
   justify-content: center;
   position: absolute;
   inset: 0;
+}
+
+
+main > .section > div.video-wrapper {
+  padding: unset;
+  max-width: 100%;
 }
 
 .video[data-embed-loaded='true'] .video-placeholder,
