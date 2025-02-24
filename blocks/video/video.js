@@ -112,6 +112,13 @@ export default async function decorate(block) {
   block.textContent = '';
   block.dataset.embedLoaded = false;
 
+  //Top anchor - video-wrapper class injector
+  const topAnchor = block.classList.contains('top-anchor');
+  // Top anchor - video-wrapper class injector
+  if (block.classList.contains('top-anchor')) {
+    block.parentElement.classList.add('top-anchor-wrapper'); 
+  }
+
   const autoplay = block.classList.contains('autoplay');
   if (placeholder) {
     block.classList.add('placeholder');
