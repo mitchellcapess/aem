@@ -1,0 +1,44 @@
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee.images {
+  display: flex;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+}
+
+.marquee-track {
+  display: flex;
+  animation: marquee 15s linear infinite;
+  will-change: transform;
+  white-space: nowrap;
+  padding: 1.6rem 0;
+}
+
+.marquee-item picture img {
+  display: flex;
+  object-fit: contain;
+  flex: none;
+  width: 100%;
+  max-width: 8.5rem;
+  min-width: 3.2rem;
+  height: 100%;
+  max-height: 3.5rem;
+  margin-right: 8vw;
+  line-height: 0;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
